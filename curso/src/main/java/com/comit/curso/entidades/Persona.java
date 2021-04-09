@@ -3,13 +3,11 @@ package com.comit.curso.entidades;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
 import javax.persistence.OneToMany;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +19,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
+@DiscriminatorValue("PERSONA")
 
 
 public class Persona implements Serializable {
@@ -59,10 +58,5 @@ public String getMail() {
 public void setMail(String mail) {
 	this.mail = mail;
 }
-
-
-
-
-
 
 }
